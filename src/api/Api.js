@@ -1,6 +1,8 @@
 import React from 'react';
+
 import UserPost from './endpoints/UserPost';
 import TokenPost from './endpoints/TokenPost';
+import PhotoPost from './endpoints/PhotoPost';
 
 const Api = () => {
   return (
@@ -10,6 +12,9 @@ const Api = () => {
 
       <h2>Buscar Token</h2>
       <TokenPost />
+
+    <h2>Postar Foto</h2>
+    <PhotoPost />
     </React.Fragment>
   );
 }
