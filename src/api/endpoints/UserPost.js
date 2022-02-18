@@ -11,7 +11,7 @@ const UserPost = () => {
     fetch('https://dogsapi.origamid.dev/json/api/user', {
       method: 'POST',
       headers: {
-        'content-Type': 'application/json',
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         username,
@@ -19,8 +19,11 @@ const UserPost = () => {
         password,
       }),
     })
-    .then(response => response.json())
-    .then(json => {
+    .then((response) => {
+      console.log(response);
+      return response.json();
+    })
+    .then((json) => {
       console.log(json);
       return json;
     });
